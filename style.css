@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+:root{
+
+    /* ### Primary */
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/* BODY */
+body{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 100% auto;
+    min-height: 100vh;
+    font-size: 16px;
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-position: top;
+        background-repeat: no-repeat;
+    background-size: 104vw 48.3vh;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* CONTENEDOR0 */
+.contenedor0{
+    max-width: 450px;
+    width: 100%;
+    height: 697px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 28px 50px -58px var(--Bright-blue);
+
+    /* IMAGE */
+    .image{
+        line-height: 0;
+    }
+
+    /* IMAGE - IMG */
+    .image img{
+        border-radius: 20px 20px 0 0;
+    }
+
+    /* PLAN-CONTAINER */
+    .plan-container{
+        flex: 1;
+        background-color: #fff;
+        padding:46px 48px;
+        border-radius: 0 0 20px 20px;
+    }
+    /* TITLE */
+    .title{
+        font-size: 28.1px;
+        font-weight: 900;
+        color: var(--Dark-blue);
+    }
+    /* TEXT */
+    .text{
+        color: var(--Desaturated-blue);
+        font-weight: 600;
+        margin-top: 17px;
+        line-height: 1.62;
+        letter-spacing: 0.02px;
+    }
+    /* TEXT > SPAN */
+    .text > span{
+        letter-spacing: 0.3px;
+    }
+    /* ANNUAL-PLAN */
+    .annual-plan{
+        background-color: var(--Very-pale-blue);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 354px;
+        width: 100%;
+        height: 97px;
+        margin: 20px auto;
+        padding: 0 24px;
+        border-radius: 15px;
+    }
+    /* CONTENT-PLAN */
+    .content-plan {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    /* TEXT-PL */
+    .text-pl{
+        color: #000;
+        font-weight: 900;
+    }
+    /* PRICE */
+    .price {
+        color: var(--Desaturated-blue);
+        font-weight: 600;
+        font-size: 16.6px;
+    }
+    /* CONTENT-PRICE */
+    .content-price {
+        display: flex;
+        gap: 20px;
+    }
+    /* CHANGE */
+    .change {
+        color: var(--Bright-blue);
+        font-size: 14px;
+        font-weight: 700;
+    }
+    /* PAYMENT */
+    .payment {
+        max-width: 354px;
+        width: 100%;
+        height: 49px;
+        background-color: var(--Bright-blue);
+        box-shadow: 0px 16px 46px -18px var(--Bright-blue);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        letter-spacing: 0.4px;
+        font-size: 14.76px;
+        border-radius: 10px;
+        margin-top: 13px;
+        cursor: pointer;
+    }
+    /* TEXT-OR */
+    .text-or {
+        margin-top: 32px;
+        font-size: 15.2px;
+        font-weight: 700;
+        margin-right: 2px;
+        color: var(--Desaturated-blue);
+        cursor: pointer;
+    }
+}
+
+
+/* FOOTER */
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 769px){
+    /* BODY */
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        /* CONTENEDOR0 */
+        .contenedor0{
+            height: 567px;
+            max-width: 327px;
+            width: 100%;
+            
+            .image img {
+            max-width: 327px;
+            width: 100%;
+            }
+            /* PLAN-CONTAINER */
+            .plan-container{
+            max-width: 327px;
+            width: 100%;
+            height: 407px;
+            padding:0 24px;
+            }
+            /* TITLE */
+            .title {
+                font-size: 22px;
+                margin-top: 31px;
+            }
+            /* TEXT */
+            .text {
+                font-size: 15px;
+                padding: 0 16px;
+                line-height: 1.68;
+            }
+            /* ANNUAL-PLAN */
+            .annual-plan{
+                height: 81px;
+                padding: 0 16px;
+                margin-top: 23px;
+                margin-bottom: 0;
+            }
+            /* CONTENT-PRICE */
+            .content-price{
+                align-items: center;
+            }
+            /* TEXT-PL */
+            .text-pl {
+                font-size: 13.7px;
+            }
+            /* PRICE */
+            .price{
+                font-size: 14px;
+            }
+            /* CHANGE */
+            .change{
+                font-size: 13px;
+            }
+            /* PAYMENT */
+            .payment{
+                margin-top: 24px;
+            }
+            /* TEXT-OR */
+            .text-or {
+                margin-top: 25px;
+            }
+        }
+    }
+  
+}
